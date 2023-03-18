@@ -25,7 +25,6 @@
       "@shared/*": ["shared/*"],
       "@core": ["api/components/core"],
       "@environment": ["environment"],
-      "@controllers/*": ["controllers/*"],
       "@databases": ["databases"],
       "@dtos/*": ["dtos/*"],
       "@exceptions/*": ["exceptions/*"],
@@ -33,7 +32,6 @@
       "@middlewares/*": ["middlewares/*"],
       "@models/*": ["models/*"],
       "@routes/*": ["routes/*"],
-      "@services/*": ["services/*"],
       "@utils/*": ["utils/*"]
     }
   },
