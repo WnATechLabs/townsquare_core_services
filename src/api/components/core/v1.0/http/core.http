@@ -1,0 +1,4 @@
+###
+# Ping to core
+POST {{ baseUrl }}/ping
+Content-Type: application/json
