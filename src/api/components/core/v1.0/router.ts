@@ -24,5 +24,15 @@ export class CoreRouter implements CustomRouterI {
         this.router.use(`${this.path}/users`, this.usersRouter.router);
 
         this.router.post(`/ping`, this.controller.ping);
+
+        // handle 404 not found so express doesn't return an HTML response
+        this.router.get('*', this.controller.notFound);
+        this.router.head('*', this.controller.notFound);
+        this.router.post('*', this.controller.notFound);
+        this.router.put('*', this.controller.notFound);
+        this.router.delete('*', this.controller.notFound);
+        this.router.connect('*', this.controller.notFound);
+        this.router.options('*', this.controller.notFound);
+        this.router.trace('*', this.controller.notFound);
     }
 }
