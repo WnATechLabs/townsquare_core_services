@@ -9,7 +9,7 @@ import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from '@environment';
 import { CustomRouterI } from '@shared/interfaces';
-import errorMiddleware from '@middlewares/error.middleware';
+import errorMiddleware from '@shared/middlewares/error.middleware';
 import { logger, stream } from '@shared/utils/logger';
 
 class App {
