@@ -23,7 +23,7 @@ export class CoreRouter implements CustomRouterI {
         this.router.use(`${this.path}/auth`, this.authRouter.router);
         this.router.use(`${this.path}/users`, this.usersRouter.router);
 
-        this.router.post(`/ping`, this.controller.ping);
+        this.router.post(`${this.path}/ping`, this.controller.ping);
 
         // handle 404 not found so express doesn't return an HTML response
         this.router.get('*', this.controller.notFound);
