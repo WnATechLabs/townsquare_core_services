@@ -1,3 +1,3 @@
-import {UsersRouter as Router} from './router'
+import {AuthRouter as Router} from './router'
 
 export {Router}
