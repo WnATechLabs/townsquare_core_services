@@ -25,7 +25,6 @@
       "@shared/*": ["shared/*"],
       "@core": ["api/components/core"],
       "@environment": ["environment"],
-      "@exceptions/*": ["exceptions/*"],
       "@middlewares/*": ["middlewares/*"],
     }
   },
