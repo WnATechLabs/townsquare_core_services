@@ -8,17 +8,16 @@ import morgan from 'morgan';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from '@environment';
-import DB from '@databases';
-import { Routes } from '@interfaces/routes.interface';
+import { CustomRouterI } from '@shared/interfaces';
 import errorMiddleware from '@middlewares/error.middleware';
-import { logger, stream } from '@utils/logger';
+import { logger, stream } from '@shared/utils/logger';
 
 class App {
   public app: express.Application;
   public env: string;
   public port: string | number;
 
-  constructor(routes: Routes[]) {
+  constructor(routes: CustomRouterI[]) {
     this.app = express();
     this.env = NODE_ENV || 'development';
     this.port = PORT || 3000;
@@ -39,12 +38,8 @@ class App {
     });
   }
 
-  public getServer() {
-    return this.app;
-  }
-
   private connectToDatabase() {
-    DB.sequelize.sync({ force: false });
+    // DB.sequelize.sync({ force: false });
   }
 
   private initializeMiddlewares() {
@@ -58,7 +53,7 @@ class App {
     this.app.use(cookieParser());
   }
 
-  private initializeRoutes(routes: Routes[]) {
+  private initializeRoutes(routes: CustomRouterI[]) {
     routes.forEach(route => {
       this.app.use('/', route.router);
     });

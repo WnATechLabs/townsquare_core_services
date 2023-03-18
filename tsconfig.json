@@ -25,14 +25,8 @@
       "@shared/*": ["shared/*"],
       "@core": ["api/components/core"],
       "@environment": ["environment"],
-      "@databases": ["databases"],
-      "@dtos/*": ["dtos/*"],
       "@exceptions/*": ["exceptions/*"],
-      "@interfaces/*": ["interfaces/*"],
       "@middlewares/*": ["middlewares/*"],
-      "@models/*": ["models/*"],
-      "@routes/*": ["routes/*"],
-      "@utils/*": ["utils/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.json", ".env"],
