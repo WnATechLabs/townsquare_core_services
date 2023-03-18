@@ -12,6 +12,6 @@ export class UsersRouter implements CustomRouterI {
     }
 
     private initializeRoutes() {
-        this.router.use('/ping', this.controller.ping);
+        this.router.post(`/ping`, this.controller.ping);
     }
 }
