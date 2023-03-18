@@ -14,6 +14,8 @@ export class CoreRouter implements CustomRouterI {
 
     constructor() {
         this.controller = new CoreController()
+        this.usersRouter = new Users.Router(new Users.Controller())
+        this.authRouter = new Auth.Router(new Auth.Controller())
         this.initializeRoutes();
     }
 
