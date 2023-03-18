@@ -21,11 +21,11 @@
     "importHelpers": true,
     "baseUrl": "src",
     "paths": {
-      "@/*": ["*"],
+      "@project/*": ["*"],
       "@shared/*": ["shared/*"],
       "@core": ["api/components/core"],
       "@environment": ["environment"],
-      "@middlewares/*": ["middlewares/*"],
+      "@middlewares/*": ["middlewares/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.json", ".env"],

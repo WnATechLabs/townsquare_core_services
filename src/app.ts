@@ -16,7 +16,7 @@ class App {
   public app: express.Application;
   public env: string;
   public port: string | number;
-
+d
   constructor(routes: CustomRouterI[]) {
     this.app = express();
     this.env = NODE_ENV || 'development';
@@ -36,6 +36,10 @@ class App {
       logger.info(`🚀 App listening on the port ${this.port}`);
       logger.info(`=================================`);
     });
+  }
+
+  public getServer() {
+    return this.app;
   }
 
   private connectToDatabase() {
