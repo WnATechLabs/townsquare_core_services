@@ -16,3 +16,25 @@ describe('Core Test', () => {
         });
     });
 });
+
+describe('Core Auth Component Test', () => {
+    describe('[POST] /auth/ping', () => {
+        it('should response with pong', function () {
+            const router = new v1_0.Router();
+            const app = new App([router])
+
+            return request(app.getServer()).post('/api/v1.0/auth/ping').expect(200, {message: "pong"});
+        });
+    });
+});
+
+describe('Core Users Component Test', () => {
+    describe('[POST] /users/ping', () => {
+        it('should response with pong', function () {
+            const router = new v1_0.Router();
+            const app = new App([router])
+
+            return request(app.getServer()).post('/api/v1.0/users/ping').expect(200, {message: "pong"});
+        });
+    });
+});
