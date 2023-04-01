@@ -16,7 +16,7 @@ class App {
   public app: express.Application;
   public env: string;
   public port: string | number;
-d
+
   constructor(routes: CustomRouterI[]) {
     this.app = express();
     this.env = NODE_ENV || 'development';
