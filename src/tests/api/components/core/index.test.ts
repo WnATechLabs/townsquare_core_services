@@ -1,5 +1,5 @@
-import {v1_0} from '@core'
-import App from "@project/app";
+import {v1_0} from '../../../../api/components/core'
+import App from "../../../../app";
 import request from "supertest";
 
 afterAll(async () => {

@@ -1,6 +1,6 @@
-import App from '@project/app';
-import validateEnv from '@shared/utils/validateEnv';
-import {v1_0} from '@core'
+import App from './app';
+import validateEnv from './shared/utils/validateEnv';
+import {v1_0} from './api/components/core'
 
 try {
     validateEnv();

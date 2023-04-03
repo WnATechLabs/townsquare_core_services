@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { CustomRouterI } from '@shared/interfaces';
+import { CustomRouterI } from '../../../../shared/interfaces';
 
 import { CoreController } from './controller'
 import { Users, Auth } from './components'

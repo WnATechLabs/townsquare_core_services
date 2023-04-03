@@ -1,6 +1,6 @@
 import {Request, Response, NextFunction} from "express";
 import {constants as status} from "http2";
-import {HttpException} from "@shared/exceptions/HttpException";
+import {HttpException} from "../../../../shared/exceptions/HttpException";
 
 export class CoreController {
     public ping(req: Request, res: Response) {

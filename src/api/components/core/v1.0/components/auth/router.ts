@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { CustomRouterI } from '@shared/interfaces';
+import { CustomRouterI } from '../../../../../../shared/interfaces';
 import { AuthController } from './controller'
 
 export class AuthRouter implements CustomRouterI {

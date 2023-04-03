@@ -19,14 +19,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "importHelpers": true,
-    "baseUrl": "src",
-    "paths": {
-      "@project/*": ["*"],
-      "@shared/*": ["shared/*"],
-      "@core": ["api/components/core"],
-      "@environment": ["environment"],
-      "@middlewares/*": ["middlewares/*"]
-    }
+    "baseUrl": "src"
   },
   "include": ["src/**/*.ts", "src/**/*.json", ".env"],
   "exclude": ["node_modules",
