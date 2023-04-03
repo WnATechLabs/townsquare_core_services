@@ -8,5 +8,5 @@
         "src/logs/*",
         "src/**/*.{spec,test}.ts"
     ],
-    "exec": "node --inspect-brk --require ts-node/register src/server.ts"
+    "exec": "node --inspect --require ts-node/register src/server.ts"
 }
