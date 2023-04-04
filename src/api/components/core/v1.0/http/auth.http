@@ -1,4 +1,6 @@
 ###
 # Ping to auth
-POST {{ baseUrl }}/auth/ping
+POST {{baseUrl}}/auth/ping
 Content-Type: application/json
+
+{}
