@@ -1,0 +1,6 @@
+###
+# Ping to users
+POST {{baseUrl}}/users/ping
+Content-Type: application/json
+
+{}
