@@ -1,3 +1,3 @@
-import { CoreRouter as Router } from './router'
+import { CoreRouter as Router } from "./router";
 
-export { Router }
+export { Router };

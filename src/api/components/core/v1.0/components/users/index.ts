@@ -1,4 +1,4 @@
-import {UsersRouter as Router} from './router'
-import {UsersController as Controller} from './controller'
+import { UsersRouter as Router } from "./router";
+import { UsersController as Controller } from "./controller";
 
-export {Router, Controller}
+export { Router, Controller };

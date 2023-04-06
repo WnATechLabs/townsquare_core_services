@@ -1,8 +1,10 @@
-import { cleanEnv, port, str, host } from 'envalid';
+import { cleanEnv, port, str, host } from "envalid";
 
 function validateEnv() {
   cleanEnv(process.env, {
-    NODE_ENV: str({ choices: ['test', 'development', 'staging', 'production']}),
+    NODE_ENV: str({
+      choices: ["test", "development", "staging", "production"],
+    }),
     PORT: port(),
     DB_HOST: host(),
     DB_USER: str(),
@@ -11,7 +13,7 @@ function validateEnv() {
     SECRET_KEY: str(),
     LOG_FORMAT: str(),
     LOG_DIR: str(),
-    ORIGIN: str()
+    ORIGIN: str(),
   });
 }
 

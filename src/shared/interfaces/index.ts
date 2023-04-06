@@ -1,3 +1,3 @@
-import { CustomRouterI } from './customRouter.interface'
+import { CustomRouterI } from "./customRouter.interface";
 
-export { CustomRouterI }
+export { CustomRouterI };
