@@ -93,3 +93,5 @@ dist
 .dynamodb/
 
 .idea/
+
+.DS_Store
