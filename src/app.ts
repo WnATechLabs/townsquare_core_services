@@ -1,14 +1,17 @@
+import express from "express";
+
 import compression from "compression";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import express from "express";
 import helmet from "helmet";
 import hpp from "hpp";
 import morgan from "morgan";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from "./environment";
+
+// import { NODE_ENV, APP_PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from "./environment";
 import { CustomRouterI } from "./shared/interfaces";
+import { config } from "./shared/config";
 import errorMiddleware from "./shared/middlewares/error.middleware";
 import { logger, stream } from "./shared/utils/logger";
 
@@ -19,8 +22,8 @@ class App {
 
   constructor(routes: CustomRouterI[]) {
     this.app = express();
-    this.env = NODE_ENV || "development";
-    this.port = PORT || 3000;
+    this.env = config.app.env || "development";
+    this.port = config.app.port || 3000;
 
     this.connectToDatabase();
     this.initializeMiddlewares();
@@ -47,8 +50,8 @@ class App {
   }
 
   private initializeMiddlewares() {
-    this.app.use(morgan(LOG_FORMAT, { stream }));
-    this.app.use(cors({ origin: ORIGIN, credentials: CREDENTIALS }));
+    this.app.use(morgan(config.app.logFormat, { stream }));
+    this.app.use(cors({ origin: config.app.origin }));
     this.app.use(hpp());
     this.app.use(helmet());
     this.app.use(compression());
